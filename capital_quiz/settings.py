@@ -24,12 +24,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-8e8dcewjq569fno7mc*7ai3oe+9l7cq13phzp23k(_&v!*a(c&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-PORTAL_HOST=os.getenv("PORTAL_HOST", "")
+HOST=os.getenv("HOST", "")
 PORTAL_URL=os.getenv("PORTAL_URL", "")
 mode = os.getenv("env", "")
 
 DEBUG = mode == "development"
-ALLOWED_HOSTS = [PORTAL_HOST]
+ALLOWED_HOSTS = [HOST]
 CORS_ALLOWED_ORIGINS = [PORTAL_URL]
 
 # Application definition
