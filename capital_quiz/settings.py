@@ -26,9 +26,9 @@ SECRET_KEY = 'django-insecure-8e8dcewjq569fno7mc*7ai3oe+9l7cq13phzp23k(_&v!*a(c&
 # SECURITY WARNING: don't run with debug turned on in production!
 HOST=os.getenv("HOST", "")
 PORTAL_URL=os.getenv("PORTAL_URL", "")
-mode = os.getenv("env", "")
+MODE = os.getenv("env", "")
 
-DEBUG = mode == "development"
+DEBUG = MODE == "development"
 ALLOWED_HOSTS = [HOST]
 CORS_ALLOWED_ORIGINS = [PORTAL_URL]
 
